@@ -27,3 +27,10 @@ X_train, y_train = np.array(X_train), np.array(y_train)
 # Reshape
 
 X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
+
+# Build RNN
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.layers import Dropout
