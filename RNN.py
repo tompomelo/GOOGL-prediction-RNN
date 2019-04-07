@@ -42,3 +42,18 @@ regressor = Sequential()
 # First Layer
 regressor.add(LSTM(units = 50, return_sequences = True, input_shape = (X_train.shape[1], 1)))
 regressor.add(Dropout(0.2))
+
+# Second Layer
+regressor.add(LSTM(units = 50, return_sequences = True))
+regressor.add(Dropout(0.2))
+
+# Third Layer
+regressor.add(LSTM(units = 50, return_sequences = True))
+regressor.add(Dropout(0.2))
+
+# Fouth Layer
+regressor.add(LSTM(units = 50))
+regressor.add(Dropout(0.2))
+
+# Output Layer
+regressor.add(Dense(units = 1))
