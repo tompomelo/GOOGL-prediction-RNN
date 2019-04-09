@@ -57,3 +57,9 @@ regressor.add(Dropout(0.2))
 
 # Output Layer
 regressor.add(Dense(units = 1))
+
+# Compile
+regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
+
+# Fit RNN to Training Set
+regressor.fit(X_train, y_train, epochs = 100, batch_size = 32)
